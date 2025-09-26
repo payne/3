@@ -34,7 +34,21 @@ export class DataGridComponent implements OnInit, OnDestroy {
       headerName: 'Age',
       width: 80,
       editable: true,
-      filter: 'agNumberColumnFilter'
+      filter: 'agNumberColumnFilter',
+      cellEditor: 'agNumberCellEditor',
+      cellEditorParams: {
+        min: 15,
+        max: 150
+      },
+      valueSetter: (params) => {
+        const newValue = Number(params.newValue);
+        if (isNaN(newValue) || newValue < 15 || newValue > 150) {
+          alert('Age must be between 15 and 150');
+          return false;
+        }
+        params.data.age = newValue;
+        return true;
+      }
     },
     {
       field: 'salary',
