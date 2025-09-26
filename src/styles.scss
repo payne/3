@@ -1,0 +1,80 @@
+// Using Astro UXDS CSS variables from the Angular module
+// Custom CSS variables for Astro-like styling
+:root {
+  --color-background-base-default: #101923;
+  --color-background-surface-default: #1b2432;
+  --color-background-surface-header: #2c3e50;
+  --color-background-surface-hover: #253447;
+  --color-background-surface-selected: #4a90e2;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b0bec5;
+  --color-border-interactive-muted: #4a5568;
+  --color-border-focus-default: #4a90e2;
+  --color-palette-brightblue-500: #4a90e2;
+  --font-family-mono: 'Roboto Mono', 'SF Mono', Monaco, 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace;
+  --radius-base: 4px;
+  --shadow-4: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: var(--font-family-mono);
+  background-color: var(--color-background-base-default);
+  color: var(--color-text-primary);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.grid-container {
+  background-color: var(--color-background-surface-default);
+  border-radius: var(--radius-base);
+  padding: 1rem;
+  box-shadow: var(--shadow-4);
+}
+
+.ag-theme-astro {
+  --ag-background-color: var(--color-background-surface-default);
+  --ag-header-background-color: var(--color-background-surface-header);
+  --ag-odd-row-background-color: var(--color-background-surface-default);
+  --ag-even-row-background-color: var(--color-background-base-default);
+  --ag-row-hover-color: var(--color-background-surface-hover);
+  --ag-selected-row-background-color: var(--color-background-surface-selected);
+  --ag-border-color: var(--color-border-interactive-muted);
+  --ag-header-foreground-color: var(--color-text-primary);
+  --ag-foreground-color: var(--color-text-primary);
+  --ag-data-color: var(--color-text-primary);
+  --ag-secondary-foreground-color: var(--color-text-secondary);
+  --ag-input-focus-border-color: var(--color-border-focus-default);
+  --ag-input-border-color: var(--color-border-interactive-muted);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.filter-input {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border-interactive-muted);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background-base-default);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-mono);
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: var(--color-border-focus-default);
+  box-shadow: 0 0 0 2px var(--color-border-focus-default);
+}

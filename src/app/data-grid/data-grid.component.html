@@ -1,0 +1,38 @@
+<div class="grid-container">
+  <div class="controls">
+    <input
+      type="text"
+      placeholder="Search all columns..."
+      [(ngModel)]="filterText"
+      (ngModelChange)="onFilterTextChange()"
+      class="filter-input">
+
+    <button
+      class="btn btn-outline"
+      (click)="clearFilter()">
+      Clear Filter
+    </button>
+
+    <button
+      class="btn btn-secondary"
+      (click)="exportToCSV()">
+      Export CSV
+    </button>
+  </div>
+
+  <ag-grid-angular
+    class="ag-theme-alpine-dark"
+    style="height: 600px; width: 100%;"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [pagination]="true"
+    [paginationPageSize]="10"
+    [suppressRowClickSelection]="true"
+    [rowSelection]="'multiple'"
+    [editType]="'fullRow'"
+    [stopEditingWhenCellsLoseFocus]="true"
+    (gridReady)="onGridReady($event)"
+    (rowEditingStopped)="onRowEditingStopped($event)">
+  </ag-grid-angular>
+</div>

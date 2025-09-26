@@ -1,0 +1,65 @@
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 1rem 0;
+
+  h1 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-family: var(--font-family-mono);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  rux-icon {
+    color: var(--color-palette-brightblue-500);
+  }
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-mono);
+  font-size: 1.1rem;
+  margin: 0 0 2rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0 0.5rem;
+  }
+
+  .title-section {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}

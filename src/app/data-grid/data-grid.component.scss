@@ -1,0 +1,151 @@
+.grid-container {
+  background-color: var(--color-background-surface-default);
+  border-radius: var(--radius-base);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-4);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border-interactive-muted);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background-base-default);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-mono);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-border-focus-default);
+    box-shadow: 0 0 0 2px var(--color-border-focus-default);
+  }
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border-interactive-muted);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background-surface-default);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-mono);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-background-surface-hover);
+    border-color: var(--color-border-focus-default);
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    border-color: var(--color-palette-brightblue-500);
+    color: var(--color-palette-brightblue-500);
+
+    &:hover {
+      background-color: var(--color-palette-brightblue-500);
+      color: var(--color-text-primary);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: var(--color-palette-brightblue-500);
+    border-color: var(--color-palette-brightblue-500);
+    color: var(--color-text-primary);
+
+    &:hover {
+      background-color: #3a7bd5;
+      border-color: #3a7bd5;
+    }
+  }
+}
+
+::ng-deep .ag-theme-astro {
+  --ag-background-color: var(--color-background-surface-default);
+  --ag-header-background-color: var(--color-background-surface-header);
+  --ag-odd-row-background-color: var(--color-background-surface-default);
+  --ag-even-row-background-color: rgba(var(--color-background-base-default-rgb), 0.3);
+  --ag-row-hover-color: var(--color-background-surface-hover);
+  --ag-selected-row-background-color: var(--color-background-surface-selected);
+  --ag-border-color: var(--color-border-interactive-muted);
+  --ag-header-foreground-color: var(--color-text-primary);
+  --ag-foreground-color: var(--color-text-primary);
+  --ag-data-color: var(--color-text-primary);
+  --ag-secondary-foreground-color: var(--color-text-secondary);
+  --ag-input-focus-border-color: var(--color-border-focus-default);
+  --ag-input-border-color: var(--color-border-interactive-muted);
+  --ag-checkbox-checked-color: var(--color-palette-brightblue-500);
+  --ag-font-family: var(--font-family-mono);
+  --ag-font-size: 14px;
+  --ag-header-height: 40px;
+  --ag-row-height: 35px;
+  --ag-cell-horizontal-padding: 8px;
+
+  .ag-header-cell {
+    font-weight: 600;
+    border-right: 1px solid var(--color-border-interactive-muted);
+  }
+
+  .ag-cell {
+    border-right: 1px solid var(--color-border-interactive-muted);
+    display: flex;
+    align-items: center;
+  }
+
+  .ag-row-editing {
+    background-color: var(--color-background-surface-selected) !important;
+  }
+
+  .ag-cell-edit-input {
+    background-color: var(--color-background-base-default);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-focus-default);
+    border-radius: var(--radius-base);
+    padding: 4px 8px;
+  }
+
+  .ag-floating-filter-input {
+    background-color: var(--color-background-base-default);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-interactive-muted);
+    border-radius: var(--radius-base);
+  }
+
+  .ag-paging-panel {
+    background-color: var(--color-background-surface-header);
+    border-top: 1px solid var(--color-border-interactive-muted);
+    color: var(--color-text-primary);
+  }
+
+  .ag-paging-button {
+    color: var(--color-text-primary);
+    background-color: var(--color-background-base-default);
+    border: 1px solid var(--color-border-interactive-muted);
+    border-radius: var(--radius-base);
+
+    &:hover:not(.ag-disabled) {
+      background-color: var(--color-background-surface-hover);
+    }
+
+    &.ag-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .ag-icon {
+    color: var(--color-text-primary);
+  }
+}
