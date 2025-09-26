@@ -54,18 +54,15 @@
     background-color: transparent;
     border-color: var(--color-palette-brightblue-500);
     color: var(--color-palette-brightblue-500);
-
     &:hover {
       background-color: var(--color-palette-brightblue-500);
       color: var(--color-text-primary);
     }
   }
-
   &.btn-secondary {
     background-color: var(--color-palette-brightblue-500);
     border-color: var(--color-palette-brightblue-500);
     color: var(--color-text-primary);
-
     &:hover {
       background-color: #3a7bd5;
       border-color: #3a7bd5;
