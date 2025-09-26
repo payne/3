@@ -15,11 +15,11 @@ export interface DataRow {
 }
 
 export enum Department {
-  Engineering = 'Engineering',
   Sales = 'Sales',
-  Marketing = 'Marketing',
   HR = 'Human Resources',
-  Finance = 'Finance'
+  Finance = 'Finance',
+  Engineering = 'Engineering',
+  FieldSupport = 'Field Support'
 }
 
 @Injectable({

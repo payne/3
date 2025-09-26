@@ -77,7 +77,11 @@ export class DataGridComponent implements OnInit, OnDestroy {
       headerName: 'Department',
       width: 140,
       editable: true,
-      filter: true
+      filter: true,
+      cellEditor: 'agSelectCellEditor',
+      cellEditorParams: {
+        values: Object.values(Department)
+      }
     },
     {
       field: 'rating',
